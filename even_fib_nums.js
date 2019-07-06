@@ -7,11 +7,22 @@
  */
 function _sumFibs( maxFibValue ) {
   let sum = 0;
-
-  // do your work here
+  
+  // fibonacci
+  let testArr = [0, 1];
+  for (let i = 2; i < maxFibValue + 1; i++){
+    testArr.push(testArr[i - 2] + testArr[i -1])
+  } // end of fibonacci
+  
+  for(i=0; testArr[i]<=maxFibValue; i++){
+    if(testArr[i]%2 === 0){ // check if even
+      sum += testArr[i]; // add that even value
+    }
+  }
 
   return sum;
 }
+
 
 // bonus round
 function _highestFibonacciNumber (maxFibValue){
@@ -19,8 +30,15 @@ function _highestFibonacciNumber (maxFibValue){
 
   //define your base case, validate your input
 
-
-  //do your work here
+    // fibonacci
+    let testArr = [0, 1];
+    for (let i = 2; i < maxFibValue + 1; i++){
+      testArr.push(testArr[i - 2] + testArr[i -1])
+    } // end of fibonacci
+    
+    for(i=0; testArr[i]<=maxFibValue; i++){
+      highest = testArr[i];
+    }
 
   return highest;
 };
